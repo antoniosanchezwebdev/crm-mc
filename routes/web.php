@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AgendaController;
 use App\Http\Controllers\FabricantesController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BudgetController;
 use App\Http\Controllers\BudgetReferenceAutopincrementsController;
@@ -47,7 +48,7 @@ use App\Http\Livewire\Productos\IndexComponent;
 */
 
 Route::name('inicio')->get('/', function () {
-    return view('welcome');
+    return redirect('login');
 });
 
 Auth::routes();
